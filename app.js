@@ -415,6 +415,15 @@
         : `${row.cheapest[0]} 저렴`;
 
     const knownCount = [row.plkPrice != null || row.plkContract, row.kakaoPrice != null || row.kakaoDisplay, row.teePrice != null || row.teeDisplay].filter(Boolean).length;
+    const priceCandidates = [
+      row.plkPrice != null ? { name: "퍼시픽링스", price: row.plkPrice } : null,
+      row.kakaoEffective != null ? { name: "카카오골프", price: row.kakaoEffective } : null,
+      row.teePrice != null ? { name: "티스캐너", price: row.teePrice } : null,
+    ].filter(Boolean).sort((a, b) => a.price - b.price);
+    const lowestPrice = priceCandidates[0] || null;
+    const lowestSummary = lowestPrice
+      ? `<span class="lowest-label">최저가</span><strong>${won(lowestPrice.price)}</strong><small>${lowestPrice.name}</small>`
+      : `<strong>가격 확인 필요</strong>`;
     const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => `
       <div class="offer ${primary ? "primary-offer" : ""}">
         <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${primary ? "우선 예약처" : "참고 가격"}</small></div></div>
@@ -429,7 +438,7 @@
     return `<article class="course-card" data-course="${escapeHtml(row.course)}" data-date="${row.date}">
       <header class="course-card-head">
         <div><div class="date-line">${formatDate(row.date)}${isPast(row.date) ? `<span class="past-label">지난 날짜</span>` : ""}</div><h3 class="course-name"><a href="${escapeHtml(courseTarget)}" ${courseTargetAttrs}>${escapeHtml(row.course)}<span>골프장·날짜 바로보기 ↗</span></a></h3></div>
-        <span class="availability ${knownCount ? "has-price" : "no-price"}">${knownCount ? `${knownCount}개 예약처 가격 확인` : "가격 확인 필요"}</span>
+        <span class="availability ${knownCount ? "has-price" : "no-price"}">${lowestSummary}<em>${knownCount}/3개사 확인</em></span>
       </header>
       <div class="offers">
         ${offer("퍼시픽링스", row.plkUrl, row.plkContract
