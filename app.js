@@ -424,12 +424,17 @@
     const lowestSummary = lowestPrice
       ? `<span class="lowest-label">최저가</span><strong>${won(lowestPrice.price)}</strong><small>${lowestPrice.name}</small>`
       : `<strong>가격 확인 필요</strong>`;
-    const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => `
+    const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => {
+      const isFallback = platform === "퍼시픽링스" ? row.plkFallback : platform === "카카오골프" ? row.kakaoFallback : row.teeFallback;
+      const hasPrice = platform === "퍼시픽링스" ? (row.plkPrice != null || row.plkContract) : platform === "카카오골프" ? (row.kakaoPrice != null || row.kakaoDisplay) : (row.teePrice != null || row.teeDisplay);
+      const priceCaption = hasPrice ? (isFallback ? "최근 확인 최저가" : "선택일 최저가") : "최저가 미확인";
+      return `
       <div class="offer ${primary ? "primary-offer" : ""}">
-        <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${primary ? "우선 예약처" : "참고 가격"}</small></div></div>
+        <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${priceCaption}</small></div></div>
         <div class="offer-price">${priceLink(row, url, priceMarkup, platform, courseDirect)}${detailMarkup || ""}${badgeMarkup || ""}</div>
         <a class="book-button" href="${escapeHtml(url)}" ${bookingAttrs(row, platform, courseDirect)} target="_blank" rel="noreferrer">${courseDirect ? "골프장·날짜 바로보기" : platform === "퍼시픽링스" ? "PLK 로그인 후 선택" : "예약처에서 골프장 검색"}</a>
       </div>`;
+    };
 
     const internalCourseUrl = `?course=${encodeURIComponent(row.course)}&date=${row.date}#compare-heading`;
     const courseTarget = row.courseDirectUrl || internalCourseUrl;
