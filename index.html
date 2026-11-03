@@ -39,7 +39,7 @@
         </form>
 
         <div class="freshness">
-          <div><span class="pulse"></span><strong>매일 갱신</strong> <span id="auto-refresh-status">매일 자정</span></div>
+          <div><span class="pulse"></span><strong>30분마다 갱신</strong> <span id="auto-refresh-status">다음 확인까지 30분</span></div>
           <div><strong>최근 확인</strong> <span id="source-checked">–</span></div>
           <button id="refresh-page" type="button">최신 가격 다시 확인</button>
           <button id="open-method" type="button">가격 확인 기준</button>
@@ -110,7 +110,7 @@
           <span><i class="ok"></i>카카오골프 공개 가격</span>
           <span><i class="ok"></i>티스캐너 공개 가격</span>
           <span><i class="limited"></i>PLK 로그인 가격은 최근 확인가 유지</span>
-          <small>매일 00:00(KST)에 최신 가격을 확인합니다. 로그인 또는 수집 실패 시에도 마지막 정상 확인 가격을 계속 표시합니다.</small>
+          <small>매 30분마다 최신 가격 데이터를 다시 확인합니다. 로그인 또는 수집 실패 시에도 마지막 정상 확인 가격을 계속 표시합니다.</small>
         </div>
 
         <div class="results-shell">
@@ -154,7 +154,7 @@
         <li>출처 버튼은 세 예약처 모두 표시합니다. 진한 버튼은 해당 가격·혜택의 확인 출처, 옅은 버튼은 해당 날짜의 예약처 조회 화면입니다.</li>
         <li>카트비·캐디피 포함 여부와 프로모션 적용 조건은 상품마다 다를 수 있습니다.</li>
         <li>표시 가격을 누르면 해당 예약처 화면으로 이동합니다. 예약 상황에 따라 금액이 바뀔 수 있으므로 결제 전 실시간 가격을 최종 확인하세요.</li>
-        <li>화면은 매일 00:00(KST)에 최신 검증 데이터를 다시 불러옵니다. 로그인 또는 공개 수집이 실패해도 마지막 정상 확인 가격을 유지하며 확인일을 함께 표시합니다.</li>
+        <li>화면은 매 30분마다 최신 검증 데이터를 다시 불러옵니다. 로그인 또는 공개 수집이 실패해도 마지막 정상 확인 가격을 유지하며 확인일을 함께 표시합니다.</li>
         <li>월·날짜 필터는 12월 31일까지 제공하며, 실제 공개 요금이 검증된 날짜만 가격을 표시합니다.</li>
         <li>유사한 골프장명은 자동 부분일치로 합치지 않고, 확인된 동일 명칭만 별칭표로 연결합니다.</li>
       </ul>
@@ -162,6 +162,6 @@
 
     <div id="booking-toast" class="booking-toast" role="status" aria-live="polite"></div>
 
-    <script src="loader.js?v=22"></script>
+    <script src="loader.js?v=23"></script>
   </body>
 </html>
