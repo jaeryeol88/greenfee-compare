@@ -530,12 +530,13 @@
     }).format(new Date()).split("-").map(Number);
     return Date.UTC(parts[0], parts[1] - 1, parts[2] + 1) - (9 * 60 * 60 * 1000);
   };
-  const reloadAt = nextMidnightKst();
+  const refreshIntervalMs = 30 * 60 * 1000;
+  const reloadAt = Date.now() + refreshIntervalMs;
   const updateRefreshStatus = () => {
     const remaining = Math.max(0, reloadAt - Date.now());
     const hours = Math.floor(remaining / 3600000);
     const minutes = Math.ceil((remaining % 3600000) / 60000);
-    $("#auto-refresh-status").textContent = remaining > 0 ? `자정까지 ${hours}시간 ${minutes}분` : "최신 데이터 확인 중";
+    $("#auto-refresh-status").textContent = remaining > 0 ? `다음 확인까지 ${hours ? `${hours}시간 ` : ""}${minutes}분` : "최신 데이터 확인 중";
   };
   const forceRefresh = () => {
     const url = new URL(window.location.href);
