@@ -227,6 +227,55 @@
     row.courseDirectUrl = row.kakaoCourseDirect ? row.kakaoUrl : row.teeCourseDirect ? row.teeUrl : null;
   });
 
+  // 최근 정상 확인 가격 fallback: 로그인/수집 실패 시 빈칸 대신 마지막 검증가를 유지한다.
+  // 날짜별 실시간가와 혼동되지 않도록 각 카드에 원래 확인일을 함께 표시한다.
+  const verifiedByCourse = new Map();
+  data.rows.forEach((row) => {
+    const courseKey = normalizeCourse(row.course);
+    if (!verifiedByCourse.has(courseKey)) verifiedByCourse.set(courseKey, { plk: [], kakao: [], tee: [] });
+    const bucket = verifiedByCourse.get(courseKey);
+    if (row.plkPrice != null && !row.plkFallback) bucket.plk.push({ date: row.date, price: row.plkPrice, url: row.plkUrl });
+    if (row.kakaoPrice != null && !row.kakaoFallback) bucket.kakao.push({ date: row.date, price: row.kakaoPrice, display: row.kakaoDisplay, refund: row.kakaoRefund, url: row.kakaoUrl });
+    if (row.teePrice != null && !row.teeFallback) bucket.tee.push({ date: row.date, price: row.teePrice, display: row.teeDisplay, url: row.teeUrl });
+  });
+  verifiedByCourse.forEach((platforms) => Object.values(platforms).forEach((items) => items.sort((a, b) => a.date.localeCompare(b.date))));
+  const nearestVerified = (items, targetDate) => {
+    if (!items?.length) return null;
+    const prior = items.filter((item) => item.date <= targetDate);
+    return prior.at(-1) || items.at(-1);
+  };
+  data.rows.forEach((row) => {
+    const verified = verifiedByCourse.get(normalizeCourse(row.course));
+    if (!verified) return;
+    if (row.plkPrice == null && !row.plkContract) {
+      const item = nearestVerified(verified.plk, row.date);
+      if (item) {
+        row.plkPrice = item.price;
+        row.plkFallback = true;
+        row.plkFallbackDate = item.date;
+      }
+    }
+    if (row.kakaoPrice == null && !row.kakaoDisplay) {
+      const item = nearestVerified(verified.kakao, row.date);
+      if (item) {
+        row.kakaoPrice = item.price;
+        row.kakaoRefund = Number(item.refund || 0);
+        row.kakaoEffective = Math.max(0, item.price - row.kakaoRefund);
+        row.kakaoFallback = true;
+        row.kakaoFallbackDate = item.date;
+      }
+    }
+    if (row.teePrice == null && !row.teeDisplay) {
+      const item = nearestVerified(verified.tee, row.date);
+      if (item) {
+        row.teePrice = item.price;
+        row.teeFallback = true;
+        row.teeFallbackDate = item.date;
+      }
+    }
+    recalculateRow(row);
+  });
+
   const $ = (selector) => document.querySelector(selector);
   const els = {
     search: $("#course-search"),
@@ -366,12 +415,26 @@
         : `${row.cheapest[0]} 저렴`;
 
     const knownCount = [row.plkPrice != null || row.plkContract, row.kakaoPrice != null || row.kakaoDisplay, row.teePrice != null || row.teeDisplay].filter(Boolean).length;
-    const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => `
+    const priceCandidates = [
+      row.plkPrice != null ? { name: "퍼시픽링스", price: row.plkPrice } : null,
+      row.kakaoEffective != null ? { name: "카카오골프", price: row.kakaoEffective } : null,
+      row.teePrice != null ? { name: "티스캐너", price: row.teePrice } : null,
+    ].filter(Boolean).sort((a, b) => a.price - b.price);
+    const lowestPrice = priceCandidates[0] || null;
+    const lowestSummary = lowestPrice
+      ? `<span class="lowest-label">최저가</span><strong>${won(lowestPrice.price)}</strong><small>${lowestPrice.name}</small>`
+      : `<strong>가격 확인 필요</strong>`;
+    const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => {
+      const isFallback = platform === "퍼시픽링스" ? row.plkFallback : platform === "카카오골프" ? row.kakaoFallback : row.teeFallback;
+      const hasPrice = platform === "퍼시픽링스" ? (row.plkPrice != null || row.plkContract) : platform === "카카오골프" ? (row.kakaoPrice != null || row.kakaoDisplay) : (row.teePrice != null || row.teeDisplay);
+      const priceCaption = hasPrice ? (isFallback ? "최근 확인 최저가" : "선택일 최저가") : "최저가 미확인";
+      return `
       <div class="offer ${primary ? "primary-offer" : ""}">
-        <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${primary ? "우선 예약처" : "참고 가격"}</small></div></div>
+        <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${priceCaption}</small></div></div>
         <div class="offer-price">${priceLink(row, url, priceMarkup, platform, courseDirect)}${detailMarkup || ""}${badgeMarkup || ""}</div>
         <a class="book-button" href="${escapeHtml(url)}" ${bookingAttrs(row, platform, courseDirect)} target="_blank" rel="noreferrer">${courseDirect ? "골프장·날짜 바로보기" : platform === "퍼시픽링스" ? "PLK 로그인 후 선택" : "예약처에서 골프장 검색"}</a>
       </div>`;
+    };
 
     const internalCourseUrl = `?course=${encodeURIComponent(row.course)}&date=${row.date}#compare-heading`;
     const courseTarget = row.courseDirectUrl || internalCourseUrl;
@@ -380,21 +443,21 @@
     return `<article class="course-card" data-course="${escapeHtml(row.course)}" data-date="${row.date}">
       <header class="course-card-head">
         <div><div class="date-line">${formatDate(row.date)}${isPast(row.date) ? `<span class="past-label">지난 날짜</span>` : ""}</div><h3 class="course-name"><a href="${escapeHtml(courseTarget)}" ${courseTargetAttrs}>${escapeHtml(row.course)}<span>골프장·날짜 바로보기 ↗</span></a></h3></div>
-        <span class="availability ${knownCount ? "has-price" : "no-price"}">${knownCount ? `${knownCount}개 예약처 가격 확인` : "가격 확인 필요"}</span>
+        <span class="availability ${knownCount ? "has-price" : "no-price"}">${lowestSummary}<em>${knownCount}/3개사 확인</em></span>
       </header>
       <div class="offers">
         ${offer("퍼시픽링스", row.plkUrl, row.plkContract
           ? `<div class="price contract-price">협정가</div>`
           : `<div class="price ${plkWinner && row.plkPrice != null ? "winner" : ""} ${row.plkPrice == null ? "missing" : ""}">${row.plkPrice == null ? "가격 미확인" : won(row.plkPrice)}</div>`,
-          `${observedChange(row, "plk", row.plkPrice)}${row.plkTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.plkTeams)}팀</div>` : ""}`,
+          `${row.plkFallback ? `<div class="team-count">최근 확인가 · ${row.plkFallbackDate}</div>` : ""}${observedChange(row, "plk", row.plkPrice)}${row.plkTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.plkTeams)}팀</div>` : ""}`,
           row.plkContract ? `<div class="badges"><span class="badge contract">PLK 협정가</span></div>` : "", true, false)}
         ${offer("카카오골프", row.kakaoUrl,
           `<div class="price ${kakaoWinner && row.kakaoEffective != null ? "winner" : ""} ${row.kakaoPrice == null && !row.kakaoDisplay ? "missing" : ""}">${row.kakaoDisplay ? escapeHtml(row.kakaoDisplay) : row.kakaoPrice == null ? "가격 미확인" : won(row.kakaoPrice)}</div>`,
-          `${observedChange(row, "kakao", row.kakaoEffective ?? row.kakaoPrice)}${row.kakaoRefund && row.kakaoEffective != null ? `<div class="effective">환급 적용 ${won(row.kakaoEffective)}</div>` : ""}${row.kakaoTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.kakaoTeams)}팀</div>` : ""}`,
+          `${row.kakaoFallback ? `<div class="team-count">최근 확인가 · ${row.kakaoFallbackDate}</div>` : ""}${observedChange(row, "kakao", row.kakaoEffective ?? row.kakaoPrice)}${row.kakaoRefund && row.kakaoEffective != null ? `<div class="effective">환급 적용 ${won(row.kakaoEffective)}</div>` : ""}${row.kakaoTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.kakaoTeams)}팀</div>` : ""}`,
           badges ? `<div class="badges">${badges}</div>` : "", false, row.kakaoCourseDirect)}
         ${offer("티스캐너", row.teeUrl,
           `<div class="price ${teeWinner && row.teePrice != null ? "winner" : ""} ${row.teePrice == null && !row.teeDisplay ? "missing" : ""}">${row.teeDisplay ? escapeHtml(row.teeDisplay) : row.teePrice == null ? "가격 미확인" : won(row.teePrice)}</div>`,
-          `${observedChange(row, "tee", row.teePrice)}${row.teeTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.teeTeams)}팀</div>` : ""}`,
+          `${row.teeFallback ? `<div class="team-count">최근 확인가 · ${row.teeFallbackDate}</div>` : ""}${observedChange(row, "tee", row.teePrice)}${row.teeTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.teeTeams)}팀</div>` : ""}`,
           teeBadges ? `<div class="badges">${teeBadges}</div>` : "", false, row.teeCourseDirect)}
       </div>
       <footer class="course-card-foot"><span>${winnerCopy}</span><div class="source-stack"><small>출처</small>${sourceLink(row, row.plkUrl, "퍼시픽링스", row.plkSourceVerified)}${sourceLink(row, row.kakaoUrl, "카카오골프", row.kakaoSourceVerified)}${sourceLink(row, row.teeUrl, "티스캐너", row.teeSourceVerified)}</div></footer>
@@ -467,12 +530,13 @@
     }).format(new Date()).split("-").map(Number);
     return Date.UTC(parts[0], parts[1] - 1, parts[2] + 1) - (9 * 60 * 60 * 1000);
   };
-  const reloadAt = nextMidnightKst();
+  const refreshIntervalMs = 30 * 60 * 1000;
+  const reloadAt = Date.now() + refreshIntervalMs;
   const updateRefreshStatus = () => {
     const remaining = Math.max(0, reloadAt - Date.now());
     const hours = Math.floor(remaining / 3600000);
     const minutes = Math.ceil((remaining % 3600000) / 60000);
-    $("#auto-refresh-status").textContent = remaining > 0 ? `자정까지 ${hours}시간 ${minutes}분` : "최신 데이터 확인 중";
+    $("#auto-refresh-status").textContent = remaining > 0 ? `다음 확인까지 ${hours ? `${hours}시간 ` : ""}${minutes}분` : "최신 데이터 확인 중";
   };
   const forceRefresh = () => {
     const url = new URL(window.location.href);
