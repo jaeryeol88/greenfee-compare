@@ -29,6 +29,7 @@
     if (row.kakaoEffective != null) prices.push(["카카오골프", row.kakaoEffective]);
     if (row.teePrice != null) prices.push(["티스캐너", row.teePrice]);
     if (row.plkPrice != null) prices.push(["퍼시픽링스", row.plkPrice]);
+    if (row.officialPrice != null) prices.push(["공식 홈페이지", row.officialPrice]);
     prices.sort((a, b) => a[1] - b[1]);
     row.numericPlatformCount = prices.length;
     row.difference = prices.length >= 2 ? prices[1][1] - prices[0][1] : null;
@@ -276,6 +277,35 @@
     recalculateRow(row);
   });
 
+  // 골프장 공식 홈페이지 공지 최저가. 공지에서 날짜별 최저가를 계산할 수 있는 경우만 표시한다.
+  const officialFeeFor = (course, date) => {
+    const key = normalizeCourse(course);
+    const [year, month] = date.split("-").map(Number);
+    const weekday = new Date(`${date}T12:00:00+09:00`).getUTCDay();
+    if (key === "양산" && year === 2026 && month === 11) {
+      const price = weekday === 5 || weekday === 6 ? 105000 : 85000;
+      return { price, url: "https://www.yangsancc.co.kr/pagesite/use/charge.asp", checkedAt: "2026-11-03", note: "11월 공식 요금표 최저 공지가" };
+    }
+    if (key === "베이스타즈" && year === 2026 && month === 9) {
+      const price = weekday === 5 || weekday === 6 ? 140000 : 120000;
+      return { price, url: "https://www.baystars.co.kr/mobile/guide_01.asp", checkedAt: "2026-11-03", note: "9월 공식 요금표 최저 공지가" };
+    }
+    if (key === "스톤게이트") {
+      return { price: null, url: "https://stonegategc.co.kr/Guide/Fees.aspx", checkedAt: "2026-11-03", note: "월별 변동요금 · 공식 요금표 확인" };
+    }
+    return null;
+  };
+  data.rows.forEach((row) => {
+    const official = officialFeeFor(row.course, row.date);
+    if (!official) return;
+    row.officialPrice = official.price;
+    row.officialUrl = official.url;
+    row.officialCheckedAt = official.checkedAt;
+    row.officialNote = official.note;
+    row.officialSourceVerified = true;
+    recalculateRow(row);
+  });
+
   const $ = (selector) => document.querySelector(selector);
   const els = {
     search: $("#course-search"),
@@ -388,7 +418,7 @@
     return filtered;
   };
 
-  const sourceInitial = (label) => label === "카카오골프" ? "K" : label === "티스캐너" ? "T" : "P";
+  const sourceInitial = (label) => label === "카카오골프" ? "K" : label === "티스캐너" ? "T" : label === "공식 홈페이지" ? "H" : "P";
   const bookingAttrs = (row, platform, exact = false) => `data-booking-link data-course="${escapeHtml(row.course)}" data-date="${row.date}" data-platform="${escapeHtml(platform)}" data-exact="${exact ? "true" : "false"}"`;
   const sourceLink = (row, url, label, verified) => `<a class="source-link ${verified ? "verified" : "lookup"}" href="${escapeHtml(url)}" ${bookingAttrs(row, label)} target="_blank" rel="noreferrer" title="${escapeHtml(row.course)} · ${formatDate(row.date)} ${label} ${verified ? "확인 출처" : "조회"}">${sourceInitial(label)}</a>`;
   const priceLink = (row, url, content, label, exact) => `<a class="price-link" href="${escapeHtml(url)}" ${bookingAttrs(row, label, exact)} target="_blank" rel="noreferrer" aria-label="${escapeHtml(row.course)} ${formatDate(row.date)} ${escapeHtml(label)} 가격 확인">${content}<span class="price-link-hint">선택 날짜 확인 ↗</span></a>`;
@@ -419,6 +449,7 @@
       row.plkPrice != null ? { name: "퍼시픽링스", price: row.plkPrice } : null,
       row.kakaoEffective != null ? { name: "카카오골프", price: row.kakaoEffective } : null,
       row.teePrice != null ? { name: "티스캐너", price: row.teePrice } : null,
+      row.officialPrice != null ? { name: "공식 홈페이지", price: row.officialPrice } : null,
     ].filter(Boolean).sort((a, b) => a.price - b.price);
     const lowestPrice = priceCandidates[0] || null;
     const lowestSummary = lowestPrice
@@ -426,13 +457,13 @@
       : `<strong>가격 확인 필요</strong>`;
     const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => {
       const isFallback = platform === "퍼시픽링스" ? row.plkFallback : platform === "카카오골프" ? row.kakaoFallback : row.teeFallback;
-      const hasPrice = platform === "퍼시픽링스" ? (row.plkPrice != null || row.plkContract) : platform === "카카오골프" ? (row.kakaoPrice != null || row.kakaoDisplay) : (row.teePrice != null || row.teeDisplay);
+      const hasPrice = platform === "퍼시픽링스" ? (row.plkPrice != null || row.plkContract) : platform === "카카오골프" ? (row.kakaoPrice != null || row.kakaoDisplay) : platform === "티스캐너" ? (row.teePrice != null || row.teeDisplay) : row.officialPrice != null;
       const priceCaption = hasPrice ? (isFallback ? "최근 확인 최저가" : "선택일 최저가") : "최저가 미확인";
       return `
       <div class="offer ${primary ? "primary-offer" : ""}">
         <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${priceCaption}</small></div></div>
         <div class="offer-price">${priceLink(row, url, priceMarkup, platform, courseDirect)}${detailMarkup || ""}${badgeMarkup || ""}</div>
-        <a class="book-button" href="${escapeHtml(url)}" ${bookingAttrs(row, platform, courseDirect)} target="_blank" rel="noreferrer">${courseDirect ? "골프장·날짜 바로보기" : platform === "퍼시픽링스" ? "PLK 로그인 후 선택" : "예약처에서 골프장 검색"}</a>
+        <a class="book-button" href="${escapeHtml(url)}" ${bookingAttrs(row, platform, courseDirect)} target="_blank" rel="noreferrer">${courseDirect ? "골프장·날짜 바로보기" : platform === "퍼시픽링스" ? "PLK 로그인 후 선택" : platform === "공식 홈페이지" ? "공식 요금표 보기" : "예약처에서 골프장 검색"}</a>
       </div>`;
     };
 
@@ -459,8 +490,12 @@
           `<div class="price ${teeWinner && row.teePrice != null ? "winner" : ""} ${row.teePrice == null && !row.teeDisplay ? "missing" : ""}">${row.teeDisplay ? escapeHtml(row.teeDisplay) : row.teePrice == null ? "가격 미확인" : won(row.teePrice)}</div>`,
           `${row.teeFallback ? `<div class="team-count">최근 확인가 · ${row.teeFallbackDate}</div>` : ""}${observedChange(row, "tee", row.teePrice)}${row.teeTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.teeTeams)}팀</div>` : ""}`,
           teeBadges ? `<div class="badges">${teeBadges}</div>` : "", false, row.teeCourseDirect)}
+        ${row.officialUrl ? offer("공식 홈페이지", row.officialUrl,
+          `<div class="price ${row.officialPrice == null ? "missing" : ""}">${row.officialPrice == null ? "공식 금액표 확인" : won(row.officialPrice)}</div>`,
+          `<div class="team-count">${escapeHtml(row.officialNote || "공식 공지가")}${row.officialCheckedAt ? ` · ${row.officialCheckedAt} 확인` : ""}</div>`,
+          `<div class="badges"><span class="badge contract">골프장 공식 공지</span></div>`, false, true) : ""}
       </div>
-      <footer class="course-card-foot"><span>${winnerCopy}</span><div class="source-stack"><small>출처</small>${sourceLink(row, row.plkUrl, "퍼시픽링스", row.plkSourceVerified)}${sourceLink(row, row.kakaoUrl, "카카오골프", row.kakaoSourceVerified)}${sourceLink(row, row.teeUrl, "티스캐너", row.teeSourceVerified)}</div></footer>
+      <footer class="course-card-foot"><span>${winnerCopy}</span><div class="source-stack"><small>출처</small>${sourceLink(row, row.plkUrl, "퍼시픽링스", row.plkSourceVerified)}${sourceLink(row, row.kakaoUrl, "카카오골프", row.kakaoSourceVerified)}${sourceLink(row, row.teeUrl, "티스캐너", row.teeSourceVerified)}${row.officialUrl ? sourceLink(row, row.officialUrl, "공식 홈페이지", row.officialSourceVerified) : ""}</div></footer>
     </article>`;
   };
 
