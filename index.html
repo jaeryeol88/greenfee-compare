@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="퍼시픽링스·카카오골프·티스캐너 경상도권 날짜별 그린피 비교" />
+    <title>그린피 비교</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23073320'/%3E%3Ccircle cx='32' cy='29' r='15' fill='none' stroke='%23dff95f' stroke-width='6'/%3E%3Cpath d='M32 29h17v19' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <nav class="topbar">
+          <a class="brand" href="#" aria-label="골프 프라이스 데스크 홈">
+            <span class="brand-mark">G</span>
+            <span>GOLF COMBINE</span>
+          </a>
+          <div class="privacy-pill public-pill"><span></span> 공개 · 누구나 열람 가능</div>
+        </nav>
+
+        <div class="hero-copy">
+          <p class="eyebrow">GYEONGSANG GOLF PRICE</p>
+          <h1 id="page-title">그린피 비교</h1>
+          <p class="lede">그린피를 한눈에</p>
+        </div>
+
+        <form class="search-panel" id="filter-form">
+          <label class="field search-field"><span>골프장</span><div class="input-wrap"><i aria-hidden="true"></i><input id="course-search" type="search" placeholder="골프장 이름을 입력하세요" autocomplete="off" /></div></label>
+          <label class="field"><span>월</span><select id="month-filter"><option value="09">9월</option><option value="10">10월</option><option value="11">11월</option><option value="12">12월</option></select></label>
+          <label class="field date-field"><span>라운드 날짜</span><select id="date-filter"></select></label>
+          <button class="search-button" type="button" id="search-action">가격 비교하기</button>
+        </form>
+
+        <div class="freshness">
+          <div><span class="pulse"></span><strong>매일 갱신</strong> <span id="auto-refresh-status">매일 자정</span></div>
+          <div><strong>최근 확인</strong> <span id="source-checked">–</span></div>
+          <button id="refresh-page" type="button">최신 가격 다시 확인</button>
+          <button id="open-method" type="button">가격 확인 기준</button>
+        </div>
+      </section>
+
+      <section class="workspace" aria-labelledby="compare-heading">
+        <div class="workspace-heading">
+          <div>
+            <p class="eyebrow dark">COMPARE GREEN FEES</p>
+            <h2 id="compare-heading">골프장별 가격 비교</h2>
+          </div>
+          <div class="result-summary"><strong id="result-count">0</strong>개 결과</div>
+        </div>
+
+        <div class="filters secondary-filters">
+          <label class="field">
+            <span>예약처</span>
+            <select id="platform-filter">
+              <option value="all">전체 예약처</option>
+              <option value="compare">2개 이상 비교 가능</option>
+              <option value="three">3개 모두 숫자가 있음</option>
+              <option value="kakao">카카오골프 가격 있음</option>
+              <option value="tee">티스캐너 가격 있음</option>
+              <option value="plk">퍼시픽링스 표시 있음</option>
+              <option value="plk-contract">PLK 협정가</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>카카오 혜택</span>
+            <select id="benefit-filter">
+              <option value="all">전체</option>
+              <option value="any">혜택 표시 항목</option>
+              <option value="refund">1만원 환급</option>
+              <option value="ball">예약자 골프공 지급</option>
+              <option value="special">특가</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>정렬</span>
+            <select id="sort-filter">
+              <option value="plk">PLK 가격 낮은 순</option>
+              <option value="gap">타사와 가격 차이 큰 순</option>
+              <option value="low">최저가 낮은 순</option>
+              <option value="course">골프장 이름순</option>
+            </select>
+          </label>
+          <button class="reset-button" id="reset-filters" type="button">초기화</button>
+        </div>
+
+        <div class="status-grid" aria-label="데이터 요약">
+          <article><span>검색 가능 골프장</span><strong id="metric-courses">–</strong></article>
+          <article class="accent"><span>PLK 확인 가격</span><strong id="metric-plk">–</strong></article>
+          <article><span>타사 참고가격</span><strong id="metric-prices">–</strong></article>
+          <article><span>PLK 비교 가능</span><strong id="metric-compared">–</strong></article>
+        </div>
+
+        <div class="promo-legend" aria-label="혜택 표시 안내">
+          <span class="legend-label">타사 참고 혜택</span>
+          <span class="badge refund">1만원 환급</span>
+          <span class="badge gift">예약자 골프공 지급</span>
+          <span class="badge special">특가</span>
+          <span class="badge contract">PLK 협정가</span>
+          <small>할인·골프공·특가 등 해당 날짜에서 직접 확인된 혜택만 가격 아래 표시</small>
+        </div>
+
+        <div class="collector-status" aria-label="예약처별 자동 확인 상태">
+          <span><i class="ok"></i>카카오골프 공개 가격</span>
+          <span><i class="ok"></i>티스캐너 공개 가격</span>
+          <span><i class="limited"></i>PLK 로그인·협정가는 직접 확인</span>
+          <small>매일 00:00(KST)에 최신 검증 데이터를 다시 불러옵니다. 수집에 실패하면 기존 확인 가격을 유지하고 예약처 바로가기를 제공합니다.</small>
+        </div>
+
+        <div class="results-shell">
+          <div class="results-grid" id="price-rows"></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <div>⛳</div>
+            <h3 id="empty-title">조건에 맞는 가격이 없습니다</h3>
+            <p id="empty-copy">날짜나 혜택 필터를 바꿔보세요.</p>
+          </div>
+        </div>
+
+        <button class="load-more" id="load-more" type="button" hidden>결과 더 보기</button>
+      </section>
+
+      <section class="source-note" aria-labelledby="source-heading">
+        <div>
+          <p class="eyebrow">SOURCE & SCOPE</p>
+          <h2 id="source-heading">숫자보다 중요한<br />확인 기준.</h2>
+        </div>
+        <div class="source-copy">
+          <p id="basis-copy">–</p>
+          <p id="notice-copy">–</p>
+          <div class="source-links">
+            <a href="https://www.kakao.golf/" target="_blank" rel="noreferrer">카카오골프 공식 페이지 ↗</a>
+            <a href="https://www.teescanner.com/" target="_blank" rel="noreferrer">티스캐너 공식 페이지 ↗</a>
+            <a href="https://mapp.pacificlinks.co.kr/new/booking_live" target="_blank" rel="noreferrer">퍼시픽링스 예약 페이지 ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="method-dialog">
+      <button class="dialog-close" type="button" aria-label="닫기">×</button>
+      <p class="eyebrow dark">DATA NOTES</p>
+      <h2>비교 기준과 주의사항</h2>
+      <ul>
+        <li>퍼시픽링스 예약 가격을 기준으로 보여주며 카카오골프·티스캐너 가격은 같은 날짜의 참고값으로 표시합니다.</li>
+        <li>카카오 1만원 환급은 표시가와 환급 적용가를 함께 보여주며, 비교에는 적용가를 사용합니다.</li>
+        <li>퍼시픽링스 숫자 가격은 최저가 비교에 포함하며, 금액 미공개 협정가는 별도 배지로 표시하고 순위에서는 제외합니다.</li>
+        <li>골프공 지급·특가는 카카오골프 목록 또는 상세 조건에서 직접 확인된 해당 날짜에만 표시합니다.</li>
+        <li>출처 버튼은 세 예약처 모두 표시합니다. 진한 버튼은 해당 가격·혜택의 확인 출처, 옅은 버튼은 해당 날짜의 예약처 조회 화면입니다.</li>
+        <li>카트비·캐디피 포함 여부와 프로모션 적용 조건은 상품마다 다를 수 있습니다.</li>
+        <li>표시 가격을 누르면 해당 예약처 화면으로 이동합니다. 예약 상황에 따라 금액이 바뀔 수 있으므로 결제 전 실시간 가격을 최종 확인하세요.</li>
+        <li>화면은 매일 00:00(KST)에 최신 검증 데이터를 다시 불러옵니다. 공개 수집이 실패하면 마지막 정상 가격을 유지하고 상태를 표시합니다.</li>
+        <li>월·날짜 필터는 12월 31일까지 제공하며, 실제 공개 요금이 검증된 날짜만 가격을 표시합니다.</li>
+        <li>유사한 골프장명은 자동 부분일치로 합치지 않고, 확인된 동일 명칭만 별칭표로 연결합니다.</li>
+      </ul>
+    </dialog>
+
+    <div id="booking-toast" class="booking-toast" role="status" aria-live="polite"></div>
+
+    <script src="loader.js?v=19"></script>
+  </body>
+</html>
