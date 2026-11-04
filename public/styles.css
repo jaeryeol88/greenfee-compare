@@ -28,3 +28,7 @@ dialog{width:min(620px,calc(100vw - 32px));padding:35px;border:0;border-radius:2
 .availability.no-price{display:block}
 .availability.no-price strong{font-size:12px;color:#7a8793}
 @media(max-width:700px){.availability{min-width:142px}.availability strong{font-size:14px}}
+
+/* 혜택 UI 제거: 날짜·골프장별 가격 비교에만 집중 */
+.secondary-filters .field:nth-child(2),.promo-legend{display:none!important}
+.offer:nth-child(2) .badges,.offer:nth-child(3) .badges{display:none!important}
