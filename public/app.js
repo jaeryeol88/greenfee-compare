@@ -565,7 +565,7 @@
     }).format(new Date()).split("-").map(Number);
     return Date.UTC(parts[0], parts[1] - 1, parts[2] + 1) - (9 * 60 * 60 * 1000);
   };
-  const refreshIntervalMs = 30 * 60 * 1000;
+  const refreshIntervalMs = 60 * 60 * 1000;
   const reloadAt = Date.now() + refreshIntervalMs;
   const updateRefreshStatus = () => {
     const remaining = Math.max(0, reloadAt - Date.now());
