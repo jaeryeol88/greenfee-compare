@@ -3,7 +3,7 @@
   if (!data) throw new Error("가격 데이터를 불러오지 못했습니다.");
 
   const verifiedTeeScanner = (Array.isArray(window.PUBLIC_PRICES) ? window.PUBLIC_PRICES : [])
-    .filter((item) => item.platform === "티스캐너" && item.evidence === "티스캐너 골프장·날짜 상세 예약 화면");
+    .filter((item) => item.platform === "티스캐너" && String(item.evidence || "").startsWith("티스캐너"));
   const snapshotRows = [
     ...(Array.isArray(window.VERIFIED_PRICES) ? window.VERIFIED_PRICES : []),
     ...verifiedTeeScanner,
