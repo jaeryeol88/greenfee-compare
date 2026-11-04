@@ -53,6 +53,11 @@ let cursor = 0;
 const collectDate = async (page, date) => {
   const listUrl = `https://www.teescanner.com/booking/list?roundDay=${date}&tab=golfcourse`;
   await page.goto(listUrl, { waitUntil: "domcontentloaded", timeout: 20000 });
+  const enableLocation = page.getByRole("button", { name: "위치서비스 켜기", exact: true });
+  if (await enableLocation.count()) {
+    await enableLocation.first().click({ timeout: 3000 }).catch(() => {});
+    await page.waitForTimeout(900);
+  }
   const close = page.getByRole("button", { name: "닫기", exact: true });
   if (await close.count()) await close.first().click({ timeout: 2000 }).catch(() => {});
   await page.waitForTimeout(1300);
