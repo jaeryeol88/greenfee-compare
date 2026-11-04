@@ -5,7 +5,7 @@ window.PUBLIC_PRICES = [
     "platform": "카카오골프",
     "url": "https://www.kakao.golf/golf/299",
     "price": 50000,
-    "checkedAt": "2026-11-04T11:41:22",
+    "checkedAt": "2026-11-04T12:17:38",
     "benefits": [],
     "evidence": "공개 예약 화면 확인"
   },
@@ -15,7 +15,7 @@ window.PUBLIC_PRICES = [
     "platform": "카카오골프",
     "url": "https://www.kakao.golf/golf/299",
     "price": 50000,
-    "checkedAt": "2026-11-04T11:41:22",
+    "checkedAt": "2026-11-04T12:17:38",
     "benefits": [],
     "evidence": "공개 예약 화면 확인"
   },
@@ -25,7 +25,7 @@ window.PUBLIC_PRICES = [
     "platform": "카카오골프",
     "url": "https://www.kakao.golf/golf/299",
     "price": 50000,
-    "checkedAt": "2026-11-04T11:41:22",
+    "checkedAt": "2026-11-04T12:17:38",
     "benefits": [],
     "evidence": "공개 예약 화면 확인"
   }
