@@ -28,7 +28,7 @@ try {
   if(match) previous=JSON.parse(match[1]);
 } catch {}
 
-const dates=Array.from({length:15},(_,i)=>isoKst(new Date(now.getTime()+i*86400000)));
+const dates=Array.from({length:8},(_,i)=>isoKst(new Date(now.getTime()+i*86400000)));
 const latestByCourse=new Map();
 for(const row of rows){
   const prev=latestByCourse.get(row.course);
@@ -48,10 +48,10 @@ const candidates=[...latestByCourse.values()].flatMap(r=>dates.flatMap(date=>[
   r.kakaoUrl ? {course:r.course,date,platform:"카카오골프",url:withDate(r.kakaoUrl,date,"카카오골프")}:null,
   r.teeUrl ? {course:r.course,date,platform:"티스캐너",url:withDate(r.teeUrl,date,"티스캐너")}:null
 ])).filter(Boolean);
-const unique=[...new Map(candidates.map(x=>[x.platform+"|"+x.date+"|"+x.course,x])).values()].slice(0,3000);
+const unique=[...new Map(candidates.map(x=>[x.platform+"|"+x.date+"|"+x.course,x])).values()].slice(0,1600);
 
 const fetchPrice=async(item)=>{
-  const ctrl=new AbortController(); const timer=setTimeout(()=>ctrl.abort(),12000);
+  const ctrl=new AbortController(); const timer=setTimeout(()=>ctrl.abort(),5000);
   try{
     const res=await fetch(item.url,{signal:ctrl.signal,headers:{"user-agent":"Mozilla/5.0 (compatible; GreenFeeCompare/1.0)","accept-language":"ko-KR,ko;q=0.9"}});
     if(!res.ok) return null;
