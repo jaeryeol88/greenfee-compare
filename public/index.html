@@ -39,7 +39,7 @@
         </form>
 
         <div class="freshness">
-          <div><span class="pulse"></span><strong>30분마다 갱신</strong> <span id="auto-refresh-status">다음 확인까지 30분</span></div>
+          <div><span class="pulse"></span><strong>검증 가격만 표시</strong> <span id="auto-refresh-status">30분마다 화면 확인</span></div>
           <div><strong>최근 확인</strong> <span id="source-checked">–</span></div>
           <button id="refresh-page" type="button">최신 가격 다시 확인</button>
           <button id="open-method" type="button">가격 확인 기준</button>
@@ -109,8 +109,8 @@
         <div class="collector-status" aria-label="예약처별 자동 확인 상태">
           <span><i class="ok"></i>카카오골프 공개 가격</span>
           <span><i class="ok"></i>티스캐너 공개 가격</span>
-          <span><i class="limited"></i>PLK 로그인 가격은 최근 확인가 유지</span>
-          <small>매 30분마다 최신 가격 데이터를 다시 확인합니다. 로그인 또는 수집 실패 시에도 마지막 정상 확인 가격을 계속 표시합니다.</small>
+          <span><i class="limited"></i>PLK 가격은 로그인 후 최종 확인</span>
+          <small>날짜별 예약 화면이나 공식 공지에서 직접 검증된 가격만 표시합니다. 오래된 값은 과거 참고가로 구분합니다.</small>
         </div>
 
         <div class="results-shell">
@@ -162,6 +162,6 @@
 
     <div id="booking-toast" class="booking-toast" role="status" aria-live="polite"></div>
 
-    <script src="public-prices.js?v=1"></script>\n    <script src="loader.js?v=26"></script>
+    <script src="public-prices.js?v=1"></script>\n    <script src="loader.js?v=27"></script>
   </body>
 </html>
