@@ -28,11 +28,27 @@ try {
   if(match) previous=JSON.parse(match[1]);
 } catch {}
 
-const candidates=rows.filter(r=>r.date>=start&&r.date<=end).flatMap(r=>[
-  r.kakaoUrl ? {course:r.course,date:r.date,platform:"카카오골프",url:r.kakaoUrl}:null,
-  r.teeUrl ? {course:r.course,date:r.date,platform:"티스캐너",url:r.teeUrl}:null
-]).filter(Boolean);
-const unique=[...new Map(candidates.map(x=>[x.platform+"|"+x.date+"|"+x.course,x])).values()].slice(0,800);
+const dates=Array.from({length:15},(_,i)=>isoKst(new Date(now.getTime()+i*86400000)));
+const latestByCourse=new Map();
+for(const row of rows){
+  const prev=latestByCourse.get(row.course);
+  if(!prev || row.date>prev.date) latestByCourse.set(row.course,row);
+}
+const withDate=(raw,date,platform)=>{
+  try{
+    const url=new URL(raw);
+    const compact=date.replaceAll("-","");
+    for(const key of ["date","day","roundDay","playDate","bookingDate"]){
+      if(url.searchParams.has(key)) url.searchParams.set(key,key==="roundDay"?date:compact);
+    }
+    return url.toString();
+  }catch{return raw;}
+};
+const candidates=[...latestByCourse.values()].flatMap(r=>dates.flatMap(date=>[
+  r.kakaoUrl ? {course:r.course,date,platform:"카카오골프",url:withDate(r.kakaoUrl,date,"카카오골프")}:null,
+  r.teeUrl ? {course:r.course,date,platform:"티스캐너",url:withDate(r.teeUrl,date,"티스캐너")}:null
+])).filter(Boolean);
+const unique=[...new Map(candidates.map(x=>[x.platform+"|"+x.date+"|"+x.course,x])).values()].slice(0,3000);
 
 const fetchPrice=async(item)=>{
   const ctrl=new AbortController(); const timer=setTimeout(()=>ctrl.abort(),12000);
