@@ -9,7 +9,7 @@
       Function(dataCode)();
       Function(verifiedCode)();
       const app = document.createElement("script");
-      app.src = "app.js?v=19";
+      app.src = "app.js?v=26";
       document.body.appendChild(app);
     })
     .catch(() => {
