@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - "scripts/collect-public-prices.mjs"
+      - ".github/workflows/update-public-prices.yml"
 
 permissions:
   contents: write
