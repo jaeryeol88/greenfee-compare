@@ -1,421 +1,14 @@
 window.PUBLIC_PRICES = [
   {
     "course": "강동디아너스(구 블루원디아너스)",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-04&isJoin=N",
-    "price": 90000,
-    "teams": 5,
-    "checkedAt": "2026-11-04T14:48:22",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "경주레전드(구 안강레전드)",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=543&roundDay=2026-11-04&isJoin=N",
-    "price": 50000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T14:48:22",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "고령오펠",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=114158&roundDay=2026-11-04&isJoin=N",
-    "price": 85000,
-    "teams": 78,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "고령유니밸리",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=437&roundDay=2026-11-04&isJoin=N",
-    "price": 35000,
-    "teams": 75,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "고성",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=114330&roundDay=2026-11-04&isJoin=N",
-    "price": 65000,
-    "teams": 45,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "고성노벨",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-04&isJoin=N",
-    "price": 105000,
-    "teams": 6,
-    "checkedAt": "2026-11-04T23:57:48",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "골프존카운티더골프",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=113953&roundDay=2026-11-04&isJoin=N",
-    "price": 111000,
-    "teams": 91,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "골프존카운티청통",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=592&roundDay=2026-11-04&isJoin=N",
-    "price": 91000,
-    "teams": 107,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "구니",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=186&roundDay=2026-11-04&isJoin=N",
-    "price": 55000,
-    "teams": 90,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "군위오펠",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=520&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 59,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "노블레스",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=114454&roundDay=2026-11-04&isJoin=N",
-    "price": 60000,
-    "teams": 49,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "다이아몬드",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=464&roundDay=2026-11-04&isJoin=N",
-    "price": 95000,
-    "teams": 61,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "대가야",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=114040&roundDay=2026-11-04&isJoin=N",
-    "price": 60000,
-    "teams": 48,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "대구",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=268&roundDay=2026-11-04&isJoin=N",
-    "price": 100000,
-    "teams": 10,
-    "checkedAt": "2026-11-04T14:10:41",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "동부산",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T18:24:20",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "베이사이드골프클럽",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T18:24:20",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "보라",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T18:24:20",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "부곡",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-04&isJoin=N",
-    "price": 110000,
-    "teams": 16,
-    "checkedAt": "2026-11-04T23:57:48",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "블루원상주",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=124&roundDay=2026-11-04&isJoin=N",
-    "price": 80000,
-    "teams": 25,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "세븐밸리",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 80000,
-    "teams": 126,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "양산",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=143&roundDay=2026-11-04&isJoin=N",
-    "price": 100000,
-    "teams": 63,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "양산동원로얄",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=113937&roundDay=2026-11-04&isJoin=N",
-    "price": 95000,
-    "teams": 74,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "에이원",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T18:24:20",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "엠스클럽의성",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-11-04&isJoin=N",
-    "price": 65000,
-    "teams": 69,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "오르비스",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=114321&roundDay=2026-11-04&isJoin=N",
-    "price": 100000,
-    "teams": 48,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "오션비치",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=568&roundDay=2026-11-04&isJoin=N",
-    "price": 60000,
-    "teams": 43,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "오션힐스청도",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=359&roundDay=2026-11-04&isJoin=N",
-    "price": 75000,
-    "teams": 34,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "용원",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-04&isJoin=N",
-    "price": 120000,
-    "teams": 20,
-    "checkedAt": "2026-11-04T23:57:48",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "울산",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-04&isJoin=N",
-    "price": 120000,
-    "teams": 25,
-    "checkedAt": "2026-11-04T23:57:48",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "정산",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T18:24:20",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "파라지오",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=113859&roundDay=2026-11-04&isJoin=N",
-    "price": 58000,
-    "teams": 72,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "펜타뷰",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=640&roundDay=2026-11-04&isJoin=N",
-    "price": 35000,
-    "teams": 49,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "포도",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=407&roundDay=2026-11-04&isJoin=N",
-    "price": 75000,
-    "teams": 84,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "포웰CC김해(구 스카이힐김해)",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-04&isJoin=N",
-    "price": 100000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T23:57:48",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "포항",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=178&roundDay=2026-11-04&isJoin=N",
-    "price": 80000,
-    "teams": 93,
-    "checkedAt": "2026-11-04T13:40:10",
-    "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
-  },
-  {
-    "course": "해내다CC",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=91&roundDay=2026-11-04&isJoin=N",
-    "price": 95000,
-    "teams": 7,
-    "checkedAt": "2026-11-04T15:55:38",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "해운대",
-    "date": "2026-11-04",
-    "platform": "티스캐너",
-    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=405&roundDay=2026-11-04&isJoin=N",
-    "price": 70000,
-    "teams": 8,
-    "checkedAt": "2026-11-04T18:24:20",
-    "benefits": [],
-    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
-  },
-  {
-    "course": "강동디아너스(구 블루원디아너스)",
     "date": "2026-11-05",
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-05&isJoin=N",
     "price": 90000,
-    "teams": 70,
-    "checkedAt": "2026-11-04T13:40:10",
+    "teams": 42,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
+    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
   {
     "course": "경주",
@@ -490,7 +83,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-05&isJoin=N",
     "price": 85000,
     "teams": 20,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -787,7 +380,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-05&isJoin=N",
     "price": 85000,
     "teams": 29,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -994,9 +587,9 @@ window.PUBLIC_PRICES = [
     "date": "2026-11-05",
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-05&isJoin=N",
-    "price": 90000,
-    "teams": 44,
-    "checkedAt": "2026-11-04T23:57:48",
+    "price": 95000,
+    "teams": 43,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1018,7 +611,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-05&isJoin=N",
     "price": 90000,
     "teams": 40,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1105,8 +698,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-05&isJoin=N",
     "price": 60000,
-    "teams": 10,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 9,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1159,11 +752,11 @@ window.PUBLIC_PRICES = [
     "date": "2026-11-05",
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=91&roundDay=2026-11-05&isJoin=N",
-    "price": 90000,
-    "teams": 34,
-    "checkedAt": "2026-11-04T13:40:10",
+    "price": 95000,
+    "teams": 15,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
-    "evidence": "티스캐너 골프장·날짜 상세 예약 화면"
+    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
   {
     "course": "힐마루",
@@ -1502,7 +1095,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-06&isJoin=N",
     "price": 150000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1524,7 +1117,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-06&isJoin=N",
     "price": 90000,
     "teams": 27,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1722,7 +1315,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-06&isJoin=N",
     "price": 110000,
     "teams": 17,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1744,7 +1337,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-06&isJoin=N",
     "price": 100000,
     "teams": 21,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1832,7 +1425,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-06&isJoin=N",
     "price": 100000,
     "teams": 8,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1898,7 +1491,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-07&isJoin=N",
     "price": 105000,
     "teams": 6,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1909,7 +1502,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-07&isJoin=N",
     "price": 110000,
     "teams": 16,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1920,7 +1513,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-07&isJoin=N",
     "price": 120000,
     "teams": 20,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1931,7 +1524,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-07&isJoin=N",
     "price": 120000,
     "teams": 25,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1942,7 +1535,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-07&isJoin=N",
     "price": 100000,
     "teams": 8,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1953,7 +1546,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-08&isJoin=N",
     "price": 100000,
     "teams": 40,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1964,7 +1557,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-08&isJoin=N",
     "price": 90000,
     "teams": 27,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1975,7 +1568,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-08&isJoin=N",
     "price": 70000,
     "teams": 8,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1986,7 +1579,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=259&roundDay=2026-11-09&isJoin=N",
     "price": 155000,
     "teams": 4,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -1997,7 +1590,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=412&roundDay=2026-11-09&isJoin=N",
     "price": 130000,
     "teams": 10,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2008,7 +1601,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=466&roundDay=2026-11-09&isJoin=N",
     "price": 180000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2019,7 +1612,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-09&isJoin=N",
     "price": 140000,
     "teams": 13,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2030,7 +1623,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-09&isJoin=N",
     "price": 140000,
     "teams": 9,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2041,7 +1634,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-09&isJoin=N",
     "price": 120000,
     "teams": 57,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2052,7 +1645,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-09&isJoin=N",
     "price": 90000,
     "teams": 61,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2063,7 +1656,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=83&roundDay=2026-11-09&isJoin=N",
     "price": 180000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2074,7 +1667,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-09&isJoin=N",
     "price": 70000,
     "teams": 10,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2085,7 +1678,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=259&roundDay=2026-11-10&isJoin=N",
     "price": 175000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2096,7 +1689,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=466&roundDay=2026-11-10&isJoin=N",
     "price": 180000,
     "teams": 8,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2107,7 +1700,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-10&isJoin=N",
     "price": 160000,
     "teams": 17,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2118,7 +1711,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-10&isJoin=N",
     "price": 150000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2129,7 +1722,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-10&isJoin=N",
     "price": 120000,
     "teams": 91,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2140,7 +1733,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-10&isJoin=N",
     "price": 90000,
     "teams": 45,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2151,7 +1744,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=83&roundDay=2026-11-10&isJoin=N",
     "price": 190000,
     "teams": 3,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2162,7 +1755,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-10&isJoin=N",
     "price": 70000,
     "teams": 11,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2173,7 +1766,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=259&roundDay=2026-11-11&isJoin=N",
     "price": 190000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2184,7 +1777,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=412&roundDay=2026-11-11&isJoin=N",
     "price": 180000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2195,7 +1788,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=466&roundDay=2026-11-11&isJoin=N",
     "price": 180000,
     "teams": 5,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2206,7 +1799,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-11&isJoin=N",
     "price": 160000,
     "teams": 8,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2217,7 +1810,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-11&isJoin=N",
     "price": 200000,
     "teams": 20,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2228,7 +1821,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-11&isJoin=N",
     "price": 120000,
     "teams": 65,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2239,7 +1832,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-11&isJoin=N",
     "price": 90000,
     "teams": 44,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2261,7 +1854,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-11&isJoin=N",
     "price": 80000,
     "teams": 10,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2272,7 +1865,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=259&roundDay=2026-11-12&isJoin=N",
     "price": 220000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2283,7 +1876,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=412&roundDay=2026-11-12&isJoin=N",
     "price": 170000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2305,7 +1898,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-12&isJoin=N",
     "price": 160000,
     "teams": 4,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2327,7 +1920,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-12&isJoin=N",
     "price": 200000,
     "teams": 5,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2338,7 +1931,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-12&isJoin=N",
     "price": 120000,
     "teams": 73,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2349,7 +1942,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-12&isJoin=N",
     "price": 90000,
     "teams": 38,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2360,7 +1953,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-12&isJoin=N",
     "price": 80000,
     "teams": 9,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2382,7 +1975,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-13&isJoin=N",
     "price": 170000,
     "teams": 6,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2393,7 +1986,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-13&isJoin=N",
     "price": 90000,
     "teams": 37,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2404,7 +1997,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-13&isJoin=N",
     "price": 200000,
     "teams": 7,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2415,7 +2008,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-13&isJoin=N",
     "price": 120000,
     "teams": 57,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2425,8 +2018,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-13&isJoin=N",
     "price": 110000,
-    "teams": 11,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 12,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2437,7 +2030,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-13&isJoin=N",
     "price": 100000,
     "teams": 10,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2448,7 +2041,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-14&isJoin=N",
     "price": 200000,
     "teams": 42,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2459,7 +2052,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-14&isJoin=N",
     "price": 130000,
     "teams": 37,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2470,7 +2063,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-14&isJoin=N",
     "price": 120000,
     "teams": 31,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2481,7 +2074,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-14&isJoin=N",
     "price": 130000,
     "teams": 7,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2497,13 +2090,24 @@ window.PUBLIC_PRICES = [
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
   {
+    "course": "부곡",
+    "date": "2026-11-15",
+    "platform": "티스캐너",
+    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-15&isJoin=N",
+    "price": 200000,
+    "teams": 31,
+    "checkedAt": "2026-11-05T00:51:20",
+    "benefits": [],
+    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
+  },
+  {
     "course": "용원",
     "date": "2026-11-15",
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-15&isJoin=N",
     "price": 110000,
     "teams": 51,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2514,7 +2118,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-15&isJoin=N",
     "price": 100000,
     "teams": 40,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2525,7 +2129,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-15&isJoin=N",
     "price": 70000,
     "teams": 9,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2536,7 +2140,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=258&roundDay=2026-11-16&isJoin=N",
     "price": 150000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2547,7 +2151,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=412&roundDay=2026-11-16&isJoin=N",
     "price": 180000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2558,7 +2162,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=466&roundDay=2026-11-16&isJoin=N",
     "price": 210000,
     "teams": 7,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2568,8 +2172,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-16&isJoin=N",
     "price": 170000,
-    "teams": 18,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 17,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2580,7 +2184,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-16&isJoin=N",
     "price": 200000,
     "teams": 17,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2591,7 +2195,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-16&isJoin=N",
     "price": 120000,
     "teams": 43,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2602,7 +2206,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-16&isJoin=N",
     "price": 100000,
     "teams": 82,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2624,7 +2228,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-16&isJoin=N",
     "price": 80000,
     "teams": 12,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2635,7 +2239,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=259&roundDay=2026-11-17&isJoin=N",
     "price": 220000,
     "teams": 4,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2657,7 +2261,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=466&roundDay=2026-11-17&isJoin=N",
     "price": 210000,
     "teams": 6,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2668,7 +2272,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-17&isJoin=N",
     "price": 160000,
     "teams": 19,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2679,7 +2283,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-17&isJoin=N",
     "price": 160000,
     "teams": 32,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2689,8 +2293,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-17&isJoin=N",
     "price": 200000,
-    "teams": 18,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 17,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2701,7 +2305,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=111&roundDay=2026-11-17&isJoin=N",
     "price": 120000,
     "teams": 88,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2712,7 +2316,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-17&isJoin=N",
     "price": 100000,
     "teams": 45,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2734,7 +2338,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=174&roundDay=2026-11-17&isJoin=N",
     "price": 70000,
     "teams": 10,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2745,7 +2349,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=412&roundDay=2026-11-18&isJoin=N",
     "price": 170000,
     "teams": 5,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2767,7 +2371,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-18&isJoin=N",
     "price": 160000,
     "teams": 14,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2778,7 +2382,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-18&isJoin=N",
     "price": 160000,
     "teams": 48,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2789,7 +2393,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-18&isJoin=N",
     "price": 200000,
     "teams": 3,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2800,7 +2404,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-18&isJoin=N",
     "price": 100000,
     "teams": 39,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2811,7 +2415,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-19&isJoin=N",
     "price": 85000,
     "teams": 49,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2833,7 +2437,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-19&isJoin=N",
     "price": 170000,
     "teams": 4,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2844,7 +2448,18 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-19&isJoin=N",
     "price": 160000,
     "teams": 51,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
+    "benefits": [],
+    "evidence": "티스캐너 날짜별 골프장 목록 최저가"
+  },
+  {
+    "course": "에이원",
+    "date": "2026-11-19",
+    "platform": "티스캐너",
+    "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=134&roundDay=2026-11-19&isJoin=N",
+    "price": 200000,
+    "teams": 7,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2855,7 +2470,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-19&isJoin=N",
     "price": 100000,
     "teams": 50,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2866,7 +2481,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-20&isJoin=N",
     "price": 105000,
     "teams": 40,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2877,7 +2492,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-20&isJoin=N",
     "price": 120000,
     "teams": 18,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2888,7 +2503,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-20&isJoin=N",
     "price": 170000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2899,7 +2514,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=213&roundDay=2026-11-20&isJoin=N",
     "price": 160000,
     "teams": 48,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2910,7 +2525,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-20&isJoin=N",
     "price": 110000,
     "teams": 44,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2921,7 +2536,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-21&isJoin=N",
     "price": 130000,
     "teams": 25,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2932,7 +2547,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-21&isJoin=N",
     "price": 90000,
     "teams": 2,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2954,7 +2569,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-21&isJoin=N",
     "price": 120000,
     "teams": 38,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2965,7 +2580,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-22&isJoin=N",
     "price": 110000,
     "teams": 29,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2976,7 +2591,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-22&isJoin=N",
     "price": 150000,
     "teams": 6,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2987,7 +2602,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-22&isJoin=N",
     "price": 260000,
     "teams": 1,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -2998,7 +2613,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-22&isJoin=N",
     "price": 100000,
     "teams": 46,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3009,7 +2624,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-23&isJoin=N",
     "price": 110000,
     "teams": 66,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3020,7 +2635,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-23&isJoin=N",
     "price": 70000,
     "teams": 31,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3031,7 +2646,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-23&isJoin=N",
     "price": 150000,
     "teams": 49,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3042,7 +2657,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-23&isJoin=N",
     "price": 120000,
     "teams": 43,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3053,7 +2668,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-23&isJoin=N",
     "price": 170000,
     "teams": 22,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3064,7 +2679,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-23&isJoin=N",
     "price": 100000,
     "teams": 80,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3075,7 +2690,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=1&roundDay=2026-11-23&isJoin=N",
     "price": 130000,
     "teams": 13,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3086,7 +2701,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-24&isJoin=N",
     "price": 110000,
     "teams": 61,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3097,7 +2712,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-24&isJoin=N",
     "price": 70000,
     "teams": 31,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3108,7 +2723,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-24&isJoin=N",
     "price": 85000,
     "teams": 67,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3119,7 +2734,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-24&isJoin=N",
     "price": 120000,
     "teams": 33,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3130,7 +2745,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-24&isJoin=N",
     "price": 160000,
     "teams": 14,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3141,7 +2756,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-24&isJoin=N",
     "price": 100000,
     "teams": 47,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3152,7 +2767,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=1&roundDay=2026-11-24&isJoin=N",
     "price": 120000,
     "teams": 21,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3163,7 +2778,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=253&roundDay=2026-11-25&isJoin=N",
     "price": 110000,
     "teams": 67,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3174,7 +2789,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-25&isJoin=N",
     "price": 70000,
     "teams": 32,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3185,7 +2800,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=457&roundDay=2026-11-25&isJoin=N",
     "price": 85000,
     "teams": 72,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3196,7 +2811,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-25&isJoin=N",
     "price": 120000,
     "teams": 33,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3207,7 +2822,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=217&roundDay=2026-11-25&isJoin=N",
     "price": 170000,
     "teams": 18,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3218,7 +2833,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-25&isJoin=N",
     "price": 100000,
     "teams": 47,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3228,8 +2843,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=1&roundDay=2026-11-25&isJoin=N",
     "price": 120000,
-    "teams": 16,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 15,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3240,7 +2855,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-26&isJoin=N",
     "price": 70000,
     "teams": 29,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3251,7 +2866,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-26&isJoin=N",
     "price": 120000,
     "teams": 22,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3262,7 +2877,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-11-26&isJoin=N",
     "price": 130000,
     "teams": 15,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3273,7 +2888,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-26&isJoin=N",
     "price": 100000,
     "teams": 48,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3284,7 +2899,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=1&roundDay=2026-11-26&isJoin=N",
     "price": 120000,
     "teams": 11,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3295,7 +2910,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-27&isJoin=N",
     "price": 90000,
     "teams": 33,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3305,8 +2920,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-27&isJoin=N",
     "price": 120000,
-    "teams": 44,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 43,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3317,7 +2932,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-11-27&isJoin=N",
     "price": 130000,
     "teams": 17,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3328,7 +2943,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-27&isJoin=N",
     "price": 110000,
     "teams": 47,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3339,7 +2954,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=1&roundDay=2026-11-27&isJoin=N",
     "price": 130000,
     "teams": 18,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3350,7 +2965,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-28&isJoin=N",
     "price": 90000,
     "teams": 16,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3360,8 +2975,8 @@ window.PUBLIC_PRICES = [
     "platform": "티스캐너",
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-28&isJoin=N",
     "price": 150000,
-    "teams": 9,
-    "checkedAt": "2026-11-04T23:57:48",
+    "teams": 8,
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3372,7 +2987,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-11-28&isJoin=N",
     "price": 90000,
     "teams": 34,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3383,7 +2998,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-11-28&isJoin=N",
     "price": 230000,
     "teams": 4,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3394,7 +3009,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-28&isJoin=N",
     "price": 120000,
     "teams": 44,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3405,7 +3020,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=312&roundDay=2026-11-29&isJoin=N",
     "price": 70000,
     "teams": 17,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3416,7 +3031,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=231&roundDay=2026-11-29&isJoin=N",
     "price": 150000,
     "teams": 14,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3427,7 +3042,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-11-29&isJoin=N",
     "price": 80000,
     "teams": 30,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3438,7 +3053,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-11-29&isJoin=N",
     "price": 230000,
     "teams": 4,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3449,7 +3064,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=104&roundDay=2026-11-29&isJoin=N",
     "price": 100000,
     "teams": 48,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3460,7 +3075,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-11-30&isJoin=N",
     "price": 80000,
     "teams": 66,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3471,7 +3086,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-11-30&isJoin=N",
     "price": 120000,
     "teams": 72,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3482,7 +3097,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-12-01&isJoin=N",
     "price": 90000,
     "teams": 52,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3493,7 +3108,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-12-01&isJoin=N",
     "price": 110000,
     "teams": 56,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3504,7 +3119,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-12-02&isJoin=N",
     "price": 90000,
     "teams": 48,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3515,7 +3130,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-12-02&isJoin=N",
     "price": 110000,
     "teams": 45,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3526,7 +3141,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-12-03&isJoin=N",
     "price": 90000,
     "teams": 41,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3537,7 +3152,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-12-03&isJoin=N",
     "price": 110000,
     "teams": 59,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3548,7 +3163,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-12-04&isJoin=N",
     "price": 90000,
     "teams": 43,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3559,7 +3174,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-12-04&isJoin=N",
     "price": 120000,
     "teams": 46,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3570,7 +3185,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=408&roundDay=2026-12-05&isJoin=N",
     "price": 100000,
     "teams": 5,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3581,7 +3196,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-12-05&isJoin=N",
     "price": 150000,
     "teams": 7,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   },
@@ -3592,7 +3207,7 @@ window.PUBLIC_PRICES = [
     "url": "https://www.teescanner.com/booking/detail?tab=booking&golfclub_seq=122&roundDay=2026-12-06&isJoin=N",
     "price": 150000,
     "teams": 16,
-    "checkedAt": "2026-11-04T23:57:48",
+    "checkedAt": "2026-11-05T00:51:20",
     "benefits": [],
     "evidence": "티스캐너 날짜별 골프장 목록 최저가"
   }
