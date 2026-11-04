@@ -2,7 +2,7 @@
   const data = window.GOLF_DATA;
   if (!data) throw new Error("가격 데이터를 불러오지 못했습니다.");
 
-  const snapshotRows = Array.isArray(window.VERIFIED_PRICES) ? window.VERIFIED_PRICES : [];
+  const snapshotRows = [\n    ...(Array.isArray(window.VERIFIED_PRICES) ? window.VERIFIED_PRICES : []),\n    ...(Array.isArray(window.PUBLIC_PRICES) ? window.PUBLIC_PRICES : []),\n  ];
   const courseAliases = new Map([
     ["애플밸리p9", "애플밸리"],
     ["대가야p9", "대가야"],
