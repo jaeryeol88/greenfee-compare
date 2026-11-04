@@ -2,10 +2,7 @@
   const data = window.GOLF_DATA;
   if (!data) throw new Error("가격 데이터를 불러오지 못했습니다.");
 
-  const snapshotRows = [
-    ...(Array.isArray(window.VERIFIED_PRICES) ? window.VERIFIED_PRICES : []),
-    ...(Array.isArray(window.PUBLIC_PRICES) ? window.PUBLIC_PRICES : []),
-  ];
+  const snapshotRows = Array.isArray(window.VERIFIED_PRICES) ? window.VERIFIED_PRICES : [];
   const courseAliases = new Map([
     ["애플밸리p9", "애플밸리"],
     ["대가야p9", "대가야"],
@@ -461,7 +458,7 @@
     const offer = (platform, url, priceMarkup, detailMarkup, badgeMarkup, primary = false, courseDirect = false) => {
       const isFallback = platform === "퍼시픽링스" ? row.plkFallback : platform === "카카오골프" ? row.kakaoFallback : row.teeFallback;
       const hasPrice = platform === "퍼시픽링스" ? (row.plkPrice != null || row.plkContract) : platform === "카카오골프" ? (row.kakaoPrice != null || row.kakaoDisplay) : platform === "티스캐너" ? (row.teePrice != null || row.teeDisplay) : row.officialPrice != null;
-      const priceCaption = hasPrice ? (isFallback ? "최근 확인 최저가" : "선택일 최저가") : "최저가 미확인";
+      const priceCaption = hasPrice ? (isFallback ? "과거 참고 최저가" : "선택일 검증 최저가") : "최저가 미확인";
       return `
       <div class="offer ${primary ? "primary-offer" : ""}">
         <div class="offer-brand"><span class="platform-logo">${sourceInitial(platform)}</span><div><strong>${platform}</strong><small>${priceCaption}</small></div></div>
@@ -483,15 +480,15 @@
         ${offer("퍼시픽링스", row.plkUrl, row.plkContract
           ? `<div class="price contract-price">협정가</div>`
           : `<div class="price ${plkWinner && row.plkPrice != null ? "winner" : ""} ${row.plkPrice == null ? "missing" : ""}">${row.plkPrice == null ? "가격 미확인" : won(row.plkPrice)}</div>`,
-          `${row.plkFallback ? `<div class="team-count">최근 확인가 · ${row.plkFallbackDate}</div>` : ""}${observedChange(row, "plk", row.plkPrice)}${row.plkTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.plkTeams)}팀</div>` : ""}`,
+          `${row.plkFallback ? `<div class="team-count">과거 참고가 · ${row.plkFallbackDate}</div>` : ""}${observedChange(row, "plk", row.plkPrice)}${row.plkTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.plkTeams)}팀</div>` : ""}`,
           row.plkContract ? `<div class="badges"><span class="badge contract">PLK 협정가</span></div>` : "", true, false)}
         ${offer("카카오골프", row.kakaoUrl,
           `<div class="price ${kakaoWinner && row.kakaoEffective != null ? "winner" : ""} ${row.kakaoPrice == null && !row.kakaoDisplay ? "missing" : ""}">${row.kakaoDisplay ? escapeHtml(row.kakaoDisplay) : row.kakaoPrice == null ? "가격 미확인" : won(row.kakaoPrice)}</div>`,
-          `${row.kakaoFallback ? `<div class="team-count">최근 확인가 · ${row.kakaoFallbackDate}</div>` : ""}${observedChange(row, "kakao", row.kakaoEffective ?? row.kakaoPrice)}${row.kakaoRefund && row.kakaoEffective != null ? `<div class="effective">환급 적용 ${won(row.kakaoEffective)}</div>` : ""}${row.kakaoTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.kakaoTeams)}팀</div>` : ""}`,
+          `${row.kakaoFallback ? `<div class="team-count">과거 참고가 · ${row.kakaoFallbackDate}</div>` : ""}${observedChange(row, "kakao", row.kakaoEffective ?? row.kakaoPrice)}${row.kakaoRefund && row.kakaoEffective != null ? `<div class="effective">환급 적용 ${won(row.kakaoEffective)}</div>` : ""}${row.kakaoTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.kakaoTeams)}팀</div>` : ""}`,
           badges ? `<div class="badges">${badges}</div>` : "", false, row.kakaoCourseDirect)}
         ${offer("티스캐너", row.teeUrl,
           `<div class="price ${teeWinner && row.teePrice != null ? "winner" : ""} ${row.teePrice == null && !row.teeDisplay ? "missing" : ""}">${row.teeDisplay ? escapeHtml(row.teeDisplay) : row.teePrice == null ? "가격 미확인" : won(row.teePrice)}</div>`,
-          `${row.teeFallback ? `<div class="team-count">최근 확인가 · ${row.teeFallbackDate}</div>` : ""}${observedChange(row, "tee", row.teePrice)}${row.teeTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.teeTeams)}팀</div>` : ""}`,
+          `${row.teeFallback ? `<div class="team-count">과거 참고가 · ${row.teeFallbackDate}</div>` : ""}${observedChange(row, "tee", row.teePrice)}${row.teeTeams != null ? `<div class="team-count">잔여 ${new Intl.NumberFormat("ko-KR").format(row.teeTeams)}팀</div>` : ""}`,
           teeBadges ? `<div class="badges">${teeBadges}</div>` : "", false, row.teeCourseDirect)}
         ${row.officialUrl ? offer("공식 홈페이지", row.officialUrl,
           `<div class="price ${row.officialPrice == null ? "missing" : ""}">${row.officialPrice == null ? "공식 금액표 확인" : won(row.officialPrice)}</div>`,
